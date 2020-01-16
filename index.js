@@ -22,7 +22,7 @@ client.on('message', async message => {
 
     //help:  TODO: add a help command to display the bot's commands
     // if (chatmsg.toLowerCase().startsWith(`${prefix}help`) | chatmsg.startsWith(`${prefix}commands`)) {
-    //     chatmsg.channel.send("");
+    //     message.channel.send("");
     // };
 
     //commands:
@@ -148,11 +148,11 @@ client.on('message', async message => {
                 // Handle no results
                 return;
             }
-            chatmsg.channel.send( urls[0] );
+            message.channel.send( urls[0] );
         });
        } 
        else { 
-        chatmsg.channel.send("Error: no search term provided.  Usage example: =img apples");
+        message.channel.send("Error: no search term provided.  Usage example: =img apples");
        }
     };
 
@@ -160,16 +160,16 @@ client.on('message', async message => {
     if (chatmsg.toLowerCase().startsWith(`${prefix}echo`)) {
         var echomsg = chatmsg.substring(6).replace('=', '');
         if (echomsg.length > 0) {
-            chatmsg.channel.send(echomsg);
+            message.channel.send(echomsg);
         } else {
-            chatmsg.channel.send("Error: nothing to echo.  Usage example: $echo The new Tesla Cybertruck is cool.");
+            message.channel.send("Error: nothing to echo.  Usage example: $echo The new Tesla Cybertruck is cool.");
         }
     };
 
     //=roll
     if (chatmsg.toLowerCase().startsWith(`${prefix}roll`)) {
         var randnum = Math.floor(Math.random() * (100 - 1) + 1);
-        chatmsg.channel.send("🎲 " + randnum);
+        message.channel.send("🎲 " + randnum);
     };
 
     //=chance
@@ -181,21 +181,21 @@ client.on('message', async message => {
             isLikely = "likely";
             isLikelyEmoji = "👌";
         }
-        chatmsg.channel.send(randnum + "% chance, its " + isLikely + ". " + isLikelyEmoji);
+        message.channel.send(randnum + "% chance, its " + isLikely + ". " + isLikelyEmoji);
     };
 
     //=source
     if (chatmsg.toLowerCase().startsWith(`${prefix}source`) | chatmsg.startsWith(`${prefix}source code`)) {
-        chatmsg.channel.send("https://github.com/CTM-GOAT/Internet-Explorer-Bot");
+        message.channel.send("https://github.com/CTM-GOAT/Internet-Explorer-Bot");
     };
 
     //=owo
     if (chatmsg.toLowerCase().startsWith(`${prefix}owo`)) {
         var echomsg = chatmsg.substring(5).replace(new RegExp('l', 'g'), 'w').replace(new RegExp('r', 'g'), 'w');
         if (echomsg.length > 0) {
-            chatmsg.channel.send(echomsg.replace(new RegExp('$', 'g'), '') + "  💦");
+            message.channel.send(echomsg.replace(new RegExp('$', 'g'), '') + "  💦");
         } else {
-            chatmsg.channel.send("Error: nothing to owo-ify.  Usage example: $owo Hit or miss, I guess they never miss, huh?.");
+            message.channel.send("Error: nothing to owo-ify.  Usage example: $owo Hit or miss, I guess they never miss, huh?.");
         }
     };
 
@@ -203,15 +203,15 @@ client.on('message', async message => {
     if (chatmsg.toLowerCase().startsWith(`${prefix}ban`)) {
         var echomsg = chatmsg.substring(5);
         if (echomsg.length > 0) {
-            chatmsg.channel.send(chatmsg.substring(5) + " has been banned! 🔨");
+            message.channel.send(chatmsg.substring(5) + " has been banned! 🔨");
         } else {
-            chatmsg.channel.send("Error: noone to ban.  Usage example: $ban alex");
+            message.channel.send("Error: noone to ban.  Usage example: $ban alex");
         }
     };
 
     //=hl3
     if (chatmsg.toLowerCase().startsWith(`${prefix}hl3`)) {
-        chatmsg.channel.send("\n.             " +
+        message.channel.send("\n.             " +
             "           ⢀⣀⣠⣤⣤⣴⣦⣤⣤⣄⣀\n" +
             "⠀⠀⠀⠀⠀⠀⢀⣤⣾⣿⣿⣿⣿⠿⠿⠿⠿⣿⣿⣿⣿⣶⣤⡀\n" +
             "⠀⠀⠀⠀⣠⣾⣿⣿⡿⠛⠉⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⢿⣿⣿⣶⡀\n" +
@@ -232,14 +232,14 @@ client.on('message', async message => {
 
     //=xd
     if (chatmsg.toLowerCase().startsWith(`${prefix}xd`)) {
-        chatmsg.channel.send("X D", {
+        message.channel.send("X D", {
             tts: true
         })
     };
 
     //=sadcat
     if (chatmsg.toLowerCase().startsWith(`${prefix}sadcat`)) {
-        chatmsg.channel.send({
+        message.channel.send({
             files: ["https://i.kym-cdn.com/photos/images/original/001/389/465/663.jpg"]
         });
     };
@@ -264,21 +264,21 @@ client.on('message', async message => {
             url: randomURL
           }
         });
-        chatmsg.channel.send(embed);
+        message.channel.send(embed);
       }
 
 
     //regular chatmsg triggers
     if (chatmsg.toLowerCase().includes(`chrome`)) {
-        chatmsg.channel.send('We don\'t mention that browser here.');
+        message.channel.send('We don\'t mention that browser here.');
     };
 
     if (chatmsg.toLowerCase().includes(`internet explorer`)) {
-        chatmsg.channel.send('What the hell do you want??');
+        message.channel.send('What the hell do you want??');
     };
 
     if (chatmsg.toLowerCase().includes(`arch`)) {
-        chatmsg.channel.send('One time I was ordering coffee and suddenly realised the barista didn\'t know I use Arch. Needless to say, I stopped mid-order to inform her that I do indeed use Arch. I must have spoken louder than I intended because the whole café instantly erupted into a prolonged applause. I walked outside with my head held high. I never did finish my order that day, but just knowing that everyone around me was aware that I use Arch was more energising than a simple cup of coffee could ever be.');
+        message.channel.send('One time I was ordering coffee and suddenly realised the barista didn\'t know I use Arch. Needless to say, I stopped mid-order to inform her that I do indeed use Arch. I must have spoken louder than I intended because the whole café instantly erupted into a prolonged applause. I walked outside with my head held high. I never did finish my order that day, but just knowing that everyone around me was aware that I use Arch was more energising than a simple cup of coffee could ever be.');
     };
 
 
