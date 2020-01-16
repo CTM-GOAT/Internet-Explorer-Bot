@@ -1,0 +1,29 @@
+{
+  "name": "internet-explorer-bot",
+  "version": "1.0.0",
+  "description": "Internet Explorer, but as a Discord.JS bot.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CTM-GOAT/Internet-Explorer-Bot"
+  },
+  "author": "AlexxM97",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CTM-GOAT/Internet-Explorer-Bot/issues"
+  },
+  "homepage": "https://github.com/CTM-GOAT/Internet-Explorer-Bot#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "discord.js": "^11.5.1",
+    "ffmpeg": "0.0.4",
+    "ffmpeg-binaries": "^4.0.0",
+    "node-fetch": "^2.6.0",
+    "opusscript": "0.0.7",
+    "request": "^2.88.0",
+    "ytdl-core": "^1.0.6"
+  }
+}
