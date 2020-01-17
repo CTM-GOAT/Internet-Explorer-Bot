@@ -20,12 +20,20 @@ client.on('message', async message => {
     var chatmsg = message.content;
     const serverQueue = queue.get(message.guild.id);
 
-    //help:  TODO: add a help command to display the bot's commands
+    //=help or =commands
     // if (chatmsg.toLowerCase().startsWith(`${prefix}help`) | chatmsg.startsWith(`${prefix}commands`)) {
-    //     message.channel.send("");
+    //     message.channel.send
+    //     (
+    //     ""
+    //     );
     // };
 
     //commands:
+
+    //=invite link
+    if (chatmsg.toLowerCase().startsWith(`${prefix}invite`)) {
+        message.channel.send("https://discordapp.com/oauth2/authorize?client_id=667197788441804815&scope=bot&permissions=3660864");
+    };
 
     //music-related:
     //=play
@@ -280,7 +288,6 @@ client.on('message', async message => {
     if (chatmsg.toLowerCase().includes(`arch`)) {
         message.channel.send('One time I was ordering coffee and suddenly realised the barista didn\'t know I use Arch. Needless to say, I stopped mid-order to inform her that I do indeed use Arch. I must have spoken louder than I intended because the whole café instantly erupted into a prolonged applause. I walked outside with my head held high. I never did finish my order that day, but just knowing that everyone around me was aware that I use Arch was more energising than a simple cup of coffee could ever be.');
     };
-
 
 });
 
