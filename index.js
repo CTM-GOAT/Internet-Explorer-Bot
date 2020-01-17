@@ -21,12 +21,9 @@ client.on('message', async message => {
     const serverQueue = queue.get(message.guild.id);
 
     //=help or =commands
-    // if (chatmsg.toLowerCase().startsWith(`${prefix}help`) | chatmsg.startsWith(`${prefix}commands`)) {
-    //     message.channel.send
-    //     (
-    //     ""
-    //     );
-    // };
+    if (chatmsg.toLowerCase().startsWith(`${prefix}help`) | chatmsg.startsWith(`${prefix}commands`)) {
+        message.channel.send("To view the complete list of commands, visit the Github page!\n<https://github.com/CTM-GOAT/Internet-Explorer-Bot/blob/master/README.md>");
+    };
 
     //commands:
 
