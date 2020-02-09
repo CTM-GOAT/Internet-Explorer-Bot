@@ -32,6 +32,10 @@ client.on('message', async message => {
         message.channel.send("https://discordapp.com/oauth2/authorize?client_id=667197788441804815&scope=bot&permissions=3660864");
     };
 
+    if (chatmsg.contains("69")) {
+        message.channel.send("Nice.");
+    };
+
     //music-related:
     //=play
     if (chatmsg.toLowerCase().startsWith(`${prefix}play`)) {
