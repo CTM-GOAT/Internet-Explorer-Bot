@@ -20,3 +20,8 @@
 | `sadcat`      | Shows a picture of a really sad cat, in a cowboy hat      |
 | `pcmr`      | Fetch a random image from /r/PCMasterRace, sorted by top 100, last day      |
 
+#### To run this app
+-> You will need to have Node.js installed
+-> You will need your own API key from Discord, can get that here: https://discordapp.com/developers/docs/intro
+
+Clone, open directory, and run 'node index.js'
