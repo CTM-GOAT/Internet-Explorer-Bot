@@ -32,28 +32,6 @@ client.on('message', async message => {
         message.channel.send("https://discordapp.com/oauth2/authorize?client_id=667197788441804815&scope=bot&permissions=3660864");
     };
 
-
-    //Funny sex number
-    if (chatmsg.includes("69")) {
-        message.channel.send("Nice.");
-    };
-
-    //Spammerino
-    if (chatmsg.toLowerCase().includes("spam")) {
-        message.channel.send("Did");
-        message.channel.send("someone");
-        message.channel.send("say");
-        message.channel.send("s p a m ?");
-    };
-
-    //Send Nudes
-    if (chatmsg.toLowerCase().includes("nudes")) {
-        message.channel.send({
-            files: ["./Internet_Explorer_7.png"]
-        });
-        message.channel.send("***Do you like what you see?***");
-    };
-
     //music-related:
     //=play
     if (chatmsg.toLowerCase().startsWith(`${prefix}play`)) {
@@ -308,7 +286,33 @@ client.on('message', async message => {
     };
 
     if (chatmsg.toLowerCase().includes(`arch`)) {
-        message.channel.send('One time I was ordering coffee and suddenly realised the barista didn\'t know I use Arch. Needless to say, I stopped mid-order to inform her that I do indeed use Arch. I must have spoken louder than I intended because the whole café instantly erupted into a prolonged applause. I walked outside with my head held high. I never did finish my order that day, but just knowing that everyone around me was aware that I use Arch was more energising than a simple cup of coffee could ever be.');
+        message.channel.send('One time I was ordering coffee and suddenly realised the barista didn\'t know I use A r c h. Needless to say, I stopped mid-order to inform her that I do indeed use A r c h. I must have spoken louder than I intended because the whole café instantly erupted into a prolonged applause. I walked outside with my head held high. I never did finish my order that day, but just knowing that everyone around me was aware that I use A r c h was more energising than a simple cup of coffee could ever be.');
+    };
+
+    //Funny sex number
+    if (chatmsg.includes("69")) {
+        message.channel.send("Nice.");
+    };
+
+    //Spammerino
+    if (chatmsg.toLowerCase().includes("spam")) {
+        message.channel.send("Did");
+        message.channel.send("someone");
+        message.channel.send("say");
+        message.channel.send("s p a m ?");
+    };
+
+    //Send Nudes
+    if (chatmsg.toLowerCase().includes("nudes")) {
+        message.channel.send({
+            files: ["./Internet_Explorer_7.png"]
+        });
+        message.channel.send("***Do you like what you see?***");
+    };
+
+    //=gamer
+    if (chatmsg.toLowerCase().includes("gamer")) {
+        message.channel.send("You think you're a real gamer, but you won't rise at 330am to get those extra hours of grinding in. I have pre packaged meals on-go for any situation. I've got weed to bury the pain of my carpel tunnel. I've gone through about 17 different logitech and corsair keyboards. 23 mouses, and 5 monitors later I feel like I can take on anybody and anything. I only sleep once my quests have been fulfilled, and my E-girlfriend has been supporting me along the way, even if I've never heard her voice before I know she wants the best for me. All it takes is one little assumption about me for me to completely obliterate any chance of you beating me. I can use black magic to reverse your energy, completely polarising your ability to use hand eye coordination. Dont fuck with me, boomer.");
     };
 
 });
