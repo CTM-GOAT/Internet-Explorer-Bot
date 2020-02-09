@@ -32,14 +32,35 @@ client.on('message', async message => {
         message.channel.send("https://discordapp.com/oauth2/authorize?client_id=667197788441804815&scope=bot&permissions=3660864");
     };
 
-    if (chatmsg.contains("69")) {
+
+    //Funny sex number
+    if (chatmsg.includes("69")) {
         message.channel.send("Nice.");
+    };
+
+    //Spammerino
+    if (chatmsg.toLowerCase().includes("spam")) {
+        message.channel.send("Did");
+        message.channel.send("someone");
+        message.channel.send("say");
+        message.channel.send("s p a m ?");
+    };
+
+    //Send Nudes
+    if (chatmsg.toLowerCase().includes("nudes")) {
+        message.channel.send({
+            files: ["./Internet_Explorer_7.png"]
+        });
+        message.channel.send("***Do you like what you see?***");
     };
 
     //music-related:
     //=play
     if (chatmsg.toLowerCase().startsWith(`${prefix}play`)) {
-        execute(message, serverQueue);
+        var TextInMsg = chatmsg.substring(5);
+        if (TextInMsg.length > 0)  {
+            execute(message, serverQueue);
+        }
     };
 
     //=skip
