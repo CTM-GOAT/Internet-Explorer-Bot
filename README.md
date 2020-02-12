@@ -24,4 +24,5 @@
 -> You will need to have Node.js installed
 -> You will need your own API key from Discord, can get that here: https://discordapp.com/developers/docs/intro
 
-Clone, open directory, and run 'node index.js'
+Clone, open directory, and at the prompt, run 'npm update'
+then, run 'node index.js'
