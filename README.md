@@ -12,7 +12,7 @@
 | `img`      | Searches an image API       |
 | `echo`      | Repeats entered text     |
 | `roll`      | Rolls a random number      |
-| `chance`      | Show this bots invite link       |
+| `chance`      | Calculates the chance of something       |
 | `source`      | Show Github page        |
 | `owo`      | Convert entered text into owo-speak       |
 | `hl3`      | Shows release date for the next half life game      |
