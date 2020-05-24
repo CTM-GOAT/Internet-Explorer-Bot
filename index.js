@@ -157,6 +157,9 @@ client.on('message', async message => {
         if (chatmsg.includes("69")) {
             message.channel.send("Nice.");
         };
+        if (chatmsg.includes("420")) {
+            message.channel.send("heh heh siiiiiiick four twenteeeeeeeeeee");
+        };
         if (chatmsg.toLowerCase().includes("spam")) {
             message.channel.send("Did");
             message.channel.send("someone");
