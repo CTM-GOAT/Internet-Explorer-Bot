@@ -5,24 +5,24 @@
 
 | Command | Description                    |
 | ------------- | ------------------------------ |
-| `invite`      | Show this bots invite link       |
-| `play`      | Plays a song (from link)        |
+| `invite`      | Returns an invite link, for this bot.       |
+| `play`      | Plays a song (from a link)        |
 | `skip`      | Skips the currently playing song      |
-| `stop`      | Stops playing music      |
-| `img`      | Searches an image API       |
-| `echo`      | Repeats entered text     |
-| `roll`      | Rolls a random number      |
+| `stop`      | Stops any currently playing playing music      |
+| `img`      | Searches an image API (from keywords)       |
+| `echo`      | echo...echo......echo...........echo     |
+| `roll`      | Rolls a set of dice      |
 | `chance`      | Calculates the chance of something       |
-| `source`      | Show Github page        |
-| `owo`      | Convert entered text into owo-speak       |
-| `hl3`      | Shows release date for the next half life game      |
+| `source`      | Shows this Github repo (link)       |
+| `owo`      | Owo-ifies entered text       |
+| `hl3`      | Shows release date for the next half life game (leaked info, is legit)      |
 | `xd`      | TTS XD      |
 | `sadcat`      | Shows a picture of a really sad cat, in a cowboy hat      |
 | `pcmr`      | Fetch a random image from /r/PCMasterRace, sorted by top 100, last day      |
 
 #### To run this app
 -> You will need to have Node.js installed
--> You will need your own API key from Discord, can get that here: https://discordapp.com/developers/docs/intro
+-> You will need your own API key (+bot) from Discord, can get that here: https://discordapp.com/developers/docs/intro
 
 Clone, open directory, and at the prompt, run 'npm update'
 then, run 'node index.js'
