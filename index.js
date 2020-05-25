@@ -21,21 +21,26 @@ client.on('message', async message => {
     const serverQueue = queue.get(message.guild.id);
 
     try { 
+
         if (chatmsg.startsWith(`${prefix}help`) | chatmsg.startsWith(`${prefix}commands`)) {
             message.channel.send("To view the complete list of commands, visit the Github page!\n<https://github.com/CTM-GOAT/Internet-Explorer-Bot/blob/master/README.md>");
         };
+
         if (chatmsg.startsWith(`${prefix}invite`)) {
             message.channel.send("https://discordapp.com/oauth2/authorize?client_id=667197788441804815&scope=bot&permissions=3660864");
         };
+
         if (chatmsg.startsWith(`${prefix}play`)) {
             var TextInMsg = chatmsg.substring(5);
             if (TextInMsg.length > 0)  {
                 execute(message, serverQueue);
             }
         };
+
         if (chatmsg.startsWith(`${prefix}skip`)) {
             skip(message, serverQueue);
         };
+
         if (chatmsg.startsWith(`${prefix}stop`)) {
             stop(message, serverQueue);
         };
@@ -69,6 +74,7 @@ client.on('message', async message => {
             message.channel.send("Error: no search term provided.  Usage example: =img apples");
            }
         };
+
         if (chatmsg.toLowerCase().startsWith(`${prefix}echo`)) {
             var echomsg = chatmsg.substring(6).replace('=', '');
             if (echomsg.length > 0) {
@@ -77,10 +83,14 @@ client.on('message', async message => {
                 message.channel.send("Error: nothing to echo.  Usage example: $echo The new Tesla Cybertruck is cool.");
             }
         };
+
         if (chatmsg.toLowerCase().startsWith(`${prefix}roll`)) {
-            var randnum = Math.floor(Math.random() * (100 - 1) + 1);
-            message.channel.send("🎲 " + randnum);
+            var randnum = Math.floor(Math.random() * (6 - 1) + 1);
+            var randnum2 = Math.floor(Math.random() * (6 - 1) + 1);
+            message.channel.send("Die 1: 🎲 " + randnum);
+            message.channel.send("Die 2: 🎲 " + randnum2);
         };
+
         if (chatmsg.toLowerCase().startsWith(`${prefix}chance`)) {
             var randnum = Math.floor(Math.random() * (100 - 1) + 1);
             var isLikely = "not likely";
@@ -91,9 +101,11 @@ client.on('message', async message => {
             }
             message.channel.send(randnum + "% chance, its " + isLikely + ". " + isLikelyEmoji);
         };
+
         if (chatmsg.toLowerCase().startsWith(`${prefix}source`) | chatmsg.startsWith(`${prefix}source code`)) {
             message.channel.send("https://github.com/CTM-GOAT/Internet-Explorer-Bot");
         };
+
         if (chatmsg.toLowerCase().startsWith(`${prefix}owo`)) {
             var echomsg = chatmsg.substring(5).replace(new RegExp('l', 'g'), 'w').replace(new RegExp('r', 'g'), 'w');
             if (echomsg.length > 0) {
@@ -102,6 +114,7 @@ client.on('message', async message => {
                 message.channel.send("Error: nothing to owo-ify.  Usage example: $owo Hit or miss, I guess they never miss, huh?.");
             }
         };
+
         if (chatmsg.toLowerCase().startsWith(`${prefix}ban`)) {
             var echomsg = chatmsg.substring(5);
             if (echomsg.length > 0) {
@@ -110,6 +123,7 @@ client.on('message', async message => {
                 message.channel.send("Error: noone to ban.  Usage example: $ban alex");
             }
         };
+
         if (chatmsg.toLowerCase().startsWith(`${prefix}hl3`)) {
             message.channel.send("\n.             " +
                 "           ⢀⣀⣠⣤⣤⣴⣦⣤⣤⣄⣀\n" +
@@ -129,52 +143,69 @@ client.on('message', async message => {
                 "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠛⠛⠛⠛⠛⠛⠉⠉\n"
             );
         };
+
         if (chatmsg.toLowerCase().startsWith(`${prefix}xd`)) {
             message.channel.send("X D", {
                 tts: true
             })
         };
+
         if (chatmsg.toLowerCase().startsWith(`${prefix}sadcat`)) {
             message.channel.send({
                 files: ["https://i.kym-cdn.com/photos/images/original/001/389/465/663.jpg"]
             });
         };
+
         if (chatmsg.toLowerCase().startsWith(`${prefix}pcmr`)) {
             loadPcmrPosts();
         };
+
         if (chatmsg.toLowerCase().includes(`chrome`)) {
             message.channel.send('We don\'t mention that browser here...');
         };
+
         if (chatmsg.toLowerCase().includes(`internet explorer`)) {
             message.channel.send('What the hell do you want from me??');
         };
+
         if (chatmsg.toLowerCase().includes(`microsoft edge`)) {
             message.channel.send('I CAN KICK MS EDGE\'S ASSSSS DONT FUUUUCK WITH ME');
         };
+
         if (chatmsg.toLowerCase().includes(`arch`)) {
             message.channel.send('One time I was ordering coffee and suddenly realised the barista didn\'t know I use A r c h. Needless to say, I stopped mid-order to inform her that I do indeed use A r c h. I must have spoken louder than I intended because the whole café instantly erupted into a prolonged applause. I walked outside with my head held high. I never did finish my order that day, but just knowing that everyone around me was aware that I use A r c h was more energising than a simple cup of coffee could ever be.');
         };
+
         if (chatmsg.includes("69")) {
             message.channel.send("Nice.");
         };
+
         if (chatmsg.includes("420")) {
             message.channel.send("heh heh siiiiiiick four twenteeeeeeeeeee");
         };
+
         if (chatmsg.toLowerCase().includes("spam")) {
             message.channel.send("Did");
             message.channel.send("someone");
             message.channel.send("say");
             message.channel.send("s p a m ?");
         };
+
         if (chatmsg.toLowerCase().includes("nudes")) {
             message.channel.send({
                 files: ["./Internet_Explorer_7.png"]
             });
             message.channel.send("***Do you like what you see?***");
         };
+
         if (chatmsg.toLowerCase().includes("gamer")) {
             message.channel.send("You think you're a real g a m e r, but you won't rise at 330am to get those extra hours of grinding in. I have pre packaged meals on-go for any situation. I've got weed to bury the pain of my carpel tunnel. I've gone through about 17 different logitech and corsair keyboards. 23 mice, and 5 monitors later I feel like I can take on anybody and anything. I only sleep once my quests have been fulfilled, and my E-girlfriend has been supporting me along the way, even if I've never heard her voice before I know she wants the best for me. All it takes is one little assumption about me for me to completely obliterate any chance of you beating me. I can use black magic to reverse your energy, completely polarising your ability to use hand eye coordination. Dont fuck with me, boomer.");
         }
+
+        if (chatmsg.toLowerCase().includes("lit mobile")) {
+            message.channel.send("So Lit🔥 Mobile🔥 just sent me 📩 this wireless battery pack 🔋📱, I'm excited let's see what's inside😲😲😲. I really like the build 👌, it's got hand grips on the side ✋🏿, it's shockproof 🔌, and water resistant. The power bank has 20,000 milliamps⚡, which can fully charge your phone up to 8 times 😲🤭🤭! It's also got a convenient loop for carabiners. On the back of the device📱, we have a bunch of solar panels ⚡ which can charge the battery bank in about 60 minutes⌚⌚. On the top of the device, there are 3 USB ports🔌 and 2 of them are fast-chargers🚗🚗🚗. If you hit the power button two times, the LED 💡light💡 comes on. If you hit the power button once, the LED lights will tell you how much battery you have🔋🔋. There's a microUSB port on the side for fast charging. My 👏🏿favorite👏🏿 part of this device is that it charges my phone wirelessly📶. There's a red🔴 light indactor at the top to let you know that your phone is charging 🥵🥵🥵");
+        };
+
         async function execute(message, serverQueue) {
             const args = message.content.split(' ');
         
@@ -276,8 +307,6 @@ client.on('message', async message => {
     catch (err) { 
         message.channel.send('***Oops, got an error:  \n***`' + err + '`');
     }
-
-
 
 });
 
